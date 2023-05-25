@@ -1,0 +1,264 @@
+@charset "UTF-8";
+
+/* Aquí definimos las Custom properties */
+:root {
+  --background: rgb(255, 253, 250);
+  --primary:  rgb(197, 198, 206);
+  --secondary:   rgb(93, 95, 121);
+  --tertiary: rgb(0, 0, 26);
+
+  --accent-1:  rgb(233, 171, 83);
+  --accent-2:  rgb(241, 94, 80);
+
+  --font: 'Inter', sans-serif;
+}
+
+/* Reseteamos los margin y paddings de todas las etiquetas */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  vertical-align: baseline;
+}
+
+/* Evitamos problemas con las imagenes */
+img, picture, video, iframe, figure {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  /* opcional */
+  -o-object-fit: cover;
+     object-fit: cover;
+  /* opcional */
+  -o-object-position: center center;
+     object-position: center center;
+}
+
+/* Reseteamos los enlaces para funcionar como cajas... */
+a {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+  font-size: inherit;
+}
+
+/* ... excepto los que se encuentran en párrafos */
+p a {
+  display: inline;
+}
+
+/* Quitamos los puntos de los <li> */
+li {
+  list-style-type: none;
+}
+
+/* Configuramos anclas suaves */
+html {
+  scroll-behavior: smooth;
+  font-size: 62.5%;
+}
+
+/* Desactivamos estilos por defecto de las principales etiquetas de texto */
+h1, h2, h3, h4, h5, h6, p, span, a, strong, blockquote, i, b, u, em {
+  font-size: 1em;
+  font-weight: inherit;
+  font-style: inherit;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Evitamos problemas con los pseudoelementos de quotes */
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/* Configuramos el texto que seleccionamos */
+::-moz-selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+::selection {
+  background-color: var(--negro);
+  color: var(--blanco);
+}
+
+/* Nivelamos problemas de tipografías y colocación de formularios */
+form, input, textarea, select, button, label {
+  font-family: inherit;
+  font-size: inherit;
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  background-color: transparent;
+  color: inherit;
+  display: block;
+  /* opcional */
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+}
+
+/* Reseteamos las tablas */
+table, tr, td {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Evitamos problemas con los SVG */
+svg {
+  width: 100%;
+  display: block;
+  fill: currentColor;
+}
+
+/* (Probándolo, no usar en producción) En el caso de añadir una  */
+/* p svg{
+  display: inline;
+  width: initial;
+} */
+/* Configuramos la tipografía para toda la web */
+body {
+  min-height: 100vh;
+  font-size: 100%;
+  font-family: var(--font);
+
+  -webkit-hyphens: auto;
+      -ms-hyphens: auto;
+          hyphens: auto;
+  /* opcional */
+  font-smooth: always;
+  /* opcional */
+  -webkit-font-smoothing: antialiased;
+  /* opcional */
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Estilos */
+.header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 80px 170px 60px 170px;
+}
+.header__logo{
+  width: 60px;
+  height: 60px;
+  background-image: url("../assets/images/logo.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+
+}
+.header__nav{
+  display: flex;
+  gap: 32px;
+  font-size: 1.6rem;
+  color: var(--secondary);
+  text-transform: capitalize;
+}
+/* .header__a{
+
+} */
+main{
+  display: grid;
+  grid-template-areas: 
+    "figure figure aside"
+    "figure figure aside"
+    "h1 texto aside"
+    "section section section";
+    gap: 35px;
+  margin: 0 170px;
+}
+.figure{
+  grid-area: figure;
+}
+.aside{
+  grid-area: aside;
+  padding: 40px 25px 15px 25px;
+  background-color: var(--tertiary);
+}
+.aside__h2{
+  margin-bottom: 10px;
+  font-size: 4rem;
+  font-weight: 700;
+  color: var(--accent-1);
+}
+.aside__h3{
+  margin: 20px 0;
+  color: var(--background);
+  font-weight: 800;
+  font-size: 2rem;
+}
+.aside__p{
+  padding-bottom: 30px;
+  font-size: 1.5rem;
+  color: var(--primary);
+  border-bottom: 1px solid var(--secondary)
+}
+.aside__p--border{
+  border: none;
+}
+
+.h1{
+  grid-area: h1;
+  font-size: 5.5rem;
+  font-weight: 800;
+}
+.div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+}
+.div__p{
+  grid-area: texto;
+  font-size: 1.5rem;
+  color: var(--secondary);
+}
+.button{
+  grid-area: texto;
+  width: 200px;
+  height: 48px;
+  font-size: 1.5rem;
+  text-transform: uppercase;
+  font-weight: 700;
+  letter-spacing: 4px;
+  color: var(--background);
+  background-color: var(--accent-2);  
+}
+.section{
+  grid-area: section;
+  display: flex;
+  gap: 14px;
+  margin-bottom: 80px;
+}
+.section__article{
+  display: flex;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+.section__number{
+  font-size: 3rem;
+  font-weight: 700;
+  color: var(--primary);
+}
+.article__img{
+  width: 100px;
+  height: 150px;
+}
+.article__div{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.div__h3{
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--tertiary);
+}
+.div__p{
+  font-size: 1.5rem;
+  color: var(--secondary);
+}
