@@ -8,6 +8,12 @@
   width: 60px;
   height: 60px;
 }
+.header__a{
+  cursor: pointer;
+}
+.header__a:hover{
+  color: var(--accent-1);
+}
 main{
   display: grid;
   grid-template-areas: 
@@ -44,7 +50,7 @@ main{
   font-weight: 700;
   color: var(--accent-1);
 }
-.aside__h3{
+.aside__a{
   margin: 20px 0;
   color: var(--background);
   font-weight: 800;
@@ -84,7 +90,7 @@ main{
   font-weight: 700;
   letter-spacing: 4px;
   color: var(--background);
-  background-color: var(--accent-2);  
+  background-color: var(--accent-2);
 }
 .section{
   grid-area: section;

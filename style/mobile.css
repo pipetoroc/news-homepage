@@ -1,5 +1,4 @@
 @charset "UTF-8";
-
 /* Aquí definimos las Custom properties */
 :root {
   --background: rgb(255, 253, 250);
@@ -207,7 +206,6 @@ body {
   grid-area: texto;
   width: 200px;
   height: 48px;
-  margin-top: ;
   margin-bottom: 50px;
   font-size: 1.5rem;
   text-transform: uppercase;
@@ -215,6 +213,10 @@ body {
   letter-spacing: 4px;
   color: var(--background);
   background-color: var(--accent-2);  
+}
+.button:hover{
+  background-color: var(--secondary);
+  cursor: pointer;
 }
 .aside{
   grid-area: aside;
@@ -228,11 +230,15 @@ body {
   font-weight: 700;
   color: var(--accent-1);
 }
-.aside__h3{
+.aside__a{
   margin: 20px 0;
   color: var(--background);
   font-weight: 800;
   font-size: 2rem;
+}
+.aside__a:hover{
+  cursor: pointer;
+  color: var(--accent-1);
 }
 .aside__p{
   padding-bottom: 30px;
@@ -271,10 +277,14 @@ body {
   flex-direction: column;
   justify-content: space-between;
 }
-.div__h3{
+.div__a{
   font-size: 1.7rem;
   font-weight: 800;
   color: var(--tertiary);
+}
+.div__a:hover{
+  cursor: pointer;
+  color: var(--accent-1);
 }
 .div__p{
   font-size: 1.5rem;
