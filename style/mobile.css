@@ -150,6 +150,9 @@ body {
     background-repeat: no-repeat;
     background-size: contain;
 }
+.header__menu:hover{
+  cursor: pointer;
+}
 .header__logo{
   width: 45px;
   height: 45px;
@@ -159,12 +162,46 @@ body {
   background-size: contain;
 
 }
-.header__nav{
+.modal{
+  position: fixed;
+  top: 0;
+  left: 0;
   display: flex;
-  gap: 32px;
-  font-size: 1.6rem;
-  color: var(--secondary);
+  justify-content: right;
+  width: 100vw;
+  min-height: 100vh;
+}
+.modal-background{
+  width: 100vw;
+  min-height: 100vh;
+  background-color: var(--secondary);
+  opacity: 0.7;
+}
+.header__nav{
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 68%;
+  height: 100vh;
+  padding: 150px 0 0 32px;
+  background-color: var(--background);
+  font-size: 1.8rem;
+  line-height: 3;
   text-transform: capitalize;
+  z-index: 2;
+  opacity: 1;
+}
+
+.header__button-close{
+  position: absolute;
+  top: 30px;
+  right: 20px;
+  height: 30px;
+  width: 30px;
+  background-image: url('../assets/images/icon-menu-close.svg');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }
 .inactive{
     display: none;

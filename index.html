@@ -14,14 +14,19 @@
   <body>
     <header class="header">
       <div class="header__logo"></div>
-      <nav class="header__nav">
-        <a href="/" class="header__a">home</a>
-        <a href="/" class="header__a">new</a>
-        <a href="/" class="header__a">popular</a>
-        <a href="/" class="header__a">trending</a>
-        <a href="/" class="header__a">categories</a>
-      </nav>
-      <div class="header__menu inactive"></div>
+
+      <div class="modal inactive" id="menu">
+        <div class="modal-background"></div>
+        <nav class="header__nav " >
+          <a href="/" class="header__a">home</a>
+          <a href="/" class="header__a">new</a>
+          <a href="/" class="header__a">popular</a>
+          <a href="/" class="header__a">trending</a>
+          <a href="/" class="header__a">categories</a>
+          <div class="header__button-close" id="menuClose"></div>
+        </nav>
+      </div>
+      <div class="header__menu" id="menuIcon"></div>
     </header>
     <main>
       <figure class="figure">
