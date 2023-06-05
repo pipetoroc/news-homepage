@@ -14,6 +14,36 @@
 .header__a:hover{
   color: var(--accent-1);
 }
+.header__menu{
+  display: none;
+}
+.modal__background{
+  display: none;
+}
+.modal{
+  position: relative;
+  width: auto;
+  min-height: auto;
+  display: block;
+}
+.modal-background{
+  display: none;
+}
+
+.header__nav{
+  position: relative;
+  display: flex;
+  width: auto;
+  min-height: auto;  
+  height: auto;
+  padding: 0;
+  color: var(--secondary);
+  gap: 32px;
+}
+.header__button-close{
+  display: none;
+}
+
 main{
   display: grid;
   grid-template-areas: 

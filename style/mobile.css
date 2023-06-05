@@ -202,6 +202,7 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-size: contain;
+  cursor: pointer;
 }
 .inactive{
     display: none;
