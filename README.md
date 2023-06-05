@@ -24,7 +24,7 @@ Users should be able to:
 
 ### **Links**
 
-- Live Site URL: [Add live site URL here](https://pipetoroc.github.io/news-homepage)
+- Live Site URL: [pipetoroc](https://pipetoroc.github.io/news-homepage)
 
 ## **My process**
 
